@@ -35,7 +35,7 @@ public class seleniumlocators {
 //		}
 		
 		List<WebElement> links = driver.findElements(By.tagName("a"));
-		System.out.println("There is" + links.size() + " link on this webpage");
+		System.out.println("There is " + links.size() + " link on this webpage");
 		
 		List<WebElement> images = driver.findElements(By.tagName("img"));
 		System.out.println("There are " + images.size() + " images on this webpage");;
