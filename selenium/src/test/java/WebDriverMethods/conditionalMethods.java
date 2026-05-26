@@ -17,6 +17,20 @@ public class conditionalMethods {
 		WebElement logo = driver.findElement(By.xpath(" //img[@alt='nopCommerce demo store']"));
 		System.out.println("Display status of logo: " + logo.isDisplayed());
 		
+		//isEnabled Method - not for static elements 
+		System.out.println(driver.findElement(By.xpath("//input[@id='FirstName']")).isEnabled());
+		
+		//isSelected()
+		WebElement male_rb = driver.findElement(By.xpath("//input[@id='gender-male']"));
+		WebElement female_rb = driver.findElement(By.xpath("//input[@id='gender-female']"));
+		System.out.println(male_rb.isSelected());
+		System.out.println("After Selecting Male Radio Button.........");
+		male_rb.click();
+		System.out.println(male_rb.isSelected());
+		
+		System.out.println("Newsletter checkbox status: " +driver.findElement(By.xpath(" //input[@id='gender-female']")).isSelected());
+		
+		
 		Thread.sleep(3000);
 		driver.quit();
 		
